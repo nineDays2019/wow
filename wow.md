@@ -42,7 +42,7 @@ select location那里不选择洛杉矶和凤凰城就好了，因为这两个�
 ssh -p22 root@IP地址
 ```
 回车后要输入密码，密码在这
-![密码](https://github.com/skyloong/wow/blob/master/images/detail.png)
+![密码](https://github.com/skyloong/wow/blob/master/images/info.png)
 连接上VPS后输入以下命令
 ```
 curl -sSL https://get.daocloud.io/docker | sh
