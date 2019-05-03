@@ -45,13 +45,14 @@ ssh -p22 root@IP地址
 ![密码](https://github.com/skyloong/wow/blob/master/images/info.png)
 连接上VPS后输入以下命令
 ```
+apt-get install curl -y
 curl -sSL https://get.daocloud.io/docker | sh
 curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
-apt-get install git
+apt-get install git -y
 git clone https://github.com/skyloong/skyv2.git
 cd skyv2
-apt-get install vim
+apt-get install vim -y
 vim server.config
 ```
 将server.config里的参数替换
