@@ -6,7 +6,7 @@
 #### 机房选择
 ![detail](https://github.com/skyloong/wow/blob/master/images/detail.png)
 
-select location那里不选择洛杉矶和凤凰城就好了，因为这两个地方一般得不到可用IP
+select location那里不选择洛杉矶和凤凰城就好了，因为这两个地方一般得不到可用IP，注意系统要选择Ubuntu
 
 #### 查看IP和端口是否能用
 
@@ -43,11 +43,15 @@ ssh -p22 root@IP地址
 ```
 回车后要输入密码，密码在这
 ![密码](https://github.com/skyloong/wow/blob/master/images/info.png)
-连接上VPS后输入以下命令
+连接上后先开启BBR，开启BBR看这里
+https://blog.csdn.net/haha_ym/article/details/78440415
+然后后输入以下命令
 ```
 apt-get install curl -y
-# curl -sSL https://get.daocloud.io/docker | sh（国内源）
-curl -sSL https://get.docker.com/ | sh（国外源）
+// （国内源）：
+// curl -sSL https://get.daocloud.io/docker | sh
+//（国外源）：
+curl -sSL https://get.docker.com/ | sh
 curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 apt-get install git -y
@@ -64,4 +68,4 @@ vim server.config
 ```
 docker-compose up -d v2ray
 ```
-到此VPS的搭建完成，用客户端连接看看能不能用。
+到此VPS的搭建完成，用客户端连接看看能不能用。官网在这:https://www.v2ray.com
