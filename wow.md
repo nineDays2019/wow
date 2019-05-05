@@ -46,7 +46,8 @@ ssh -p22 root@IP地址
 连接上VPS后输入以下命令
 ```
 apt-get install curl -y
-curl -sSL https://get.daocloud.io/docker | sh
+# curl -sSL https://get.daocloud.io/docker | sh（国内源）
+curl -sSL https://get.docker.com/ | sh（国外源）
 curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 apt-get install git -y
